@@ -1,0 +1,33 @@
+name: 节点问题
+description: 报告安装、接入、任务或更新问题
+title: "[节点] "
+body:
+  - type: markdown
+    attributes:
+      value: 不要上传 node.json、config.json、邀请码、密钥、完整数据目录或私人音频。
+  - type: input
+    id: version
+    attributes:
+      label: 节点版本
+      placeholder: 例如 0.3.0-beta.4
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 系统与设备
+      placeholder: Windows 版本、CPU/GPU 型号，以及是否启用模型
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤、预期行为和实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 已脱敏的日志片段
+      description: 只保留复现所需部分，删除凭证、私人路径和不希望公开的资料。
+      render: text
