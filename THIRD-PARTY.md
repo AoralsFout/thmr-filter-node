@@ -1,24 +1,19 @@
 # 第三方组件
 
-节点程序包含独立 Python 运行环境、cryptography 及其他运行依赖，相关许可证保存在版本目录的 `licenses/` 以及依赖随附说明中。第三方组件保留各自版权与许可证，本项目不将其视为自有代码。
+第三方组件保留各自版权与许可。便携程序和离线模型资源分别附带 `licenses/` 及依赖随附说明，使用前请查看对应组件的许可限制。
 
-公开安装包不包含 FFmpeg 或 7-Zip 二进制。安装时由参与者的机器直接下载以下上游文件，校验通过后保存到独立工具目录；这些文件按上游自己的许可使用。
+## 基础便携包
 
-| 工具 | 固定版本 | 上游文件 |
-| --- | --- | --- |
-| FFmpeg / ffprobe | 9.0.2 essentials | [GyanD/codexffmpeg 发布](https://github.com/GyanD/codexffmpeg/releases/tag/9.0.2) |
-| 7zr | 7-Zip 26.06 | [ip7z/7zip 发布](https://github.com/ip7z/7zip/releases/tag/26.06) |
+基础便携包包含独立 Python 运行环境、cryptography 等运行依赖，以及 FFmpeg/ffprobe 与 7-Zip。运行时不要求参与者另行下载基础工具。
 
-SHA256：
+本次使用 FFmpeg 8.1 essentials Windows 构建，来源为 [Gyan.dev](https://www.gyan.dev/ffmpeg/builds/)，适用 GPL v3。随包 `tools/licenses/FFmpeg-README.txt` 保留构建配置与[对应 FFmpeg 源码版本](https://github.com/FFmpeg/FFmpeg/commit/9047fa1b08)，许可文本位于 `tools/licenses/FFmpeg-LICENSE.txt`。更多信息见 [FFmpeg 许可说明](https://ffmpeg.org/legal.html)。
 
-```text
-ffmpeg-9.0.2-essentials_build.zip
-60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba
+7-Zip 26.06 的许可、版权和使用说明保存在 `tools/licenses/7-Zip-License.txt` 和 `7-Zip-README.txt`。源码与发布材料见 [7-Zip 上游](https://github.com/ip7z/7zip/releases/tag/26.06)，另见 [7-Zip 许可说明](https://www.7-zip.org/license.txt)。
 
-7zr.exe (26.06)
-e80db2dad715a6c5adabe292d31ed54e11f4e9b99ca349827b50573b175891bc
-```
+## CPU/CUDA 模型资源
 
-下载的 FFmpeg 包含其许可与构建说明，工具目录保留相应副本。[FFmpeg 许可说明](https://ffmpeg.org/legal.html)、[7-Zip 许可说明](https://www.7-zip.org/license.txt)及上游源码与构建说明以维护者发布内容为准。
+模型权重和完整模型环境以独立 CPU/CUDA 资源发行，包含受管 CPython、推理依赖及其许可。讲话模型来源与转换校验信息随资源保留；CUDA 讲话使用已经转换并校验的 ONNX 权重，不要求参与者自行转换。
 
-模型不包含在程序包中。可选分类模型由 MTG/Essentia 提供，下载时会保存 `CC-BY-NC-SA-4.0` 等模型许可信息；请在使用前查看权重的原始许可与 [Essentia 许可说明](https://essentia.upf.edu/licensing_information.html)。
+分类权重来自 MTG/Essentia，适用 `CC-BY-NC-SA-4.0` 等独立许可；使用前查看资源内权重来源与许可信息，以及 [Essentia 许可说明](https://essentia.upf.edu/licensing_information.html)。随包提供不改变原许可，也不授予商业使用权限。
+
+CUDA 资源不包含显卡驱动。NVIDIA 运行库保留各自许可，程序不会代替用户安装或升级驱动。
