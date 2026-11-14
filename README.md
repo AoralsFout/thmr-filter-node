@@ -6,9 +6,9 @@
 
 ## 下载与安装
 
-**首个公开测试版：`0.3.0-beta.4`，仅支持 Windows x64，建议 Windows 10/11。**
+**当前公开测试版：`0.4.0-beta.1`，仅支持 Windows x64，建议 Windows 10/11。**
 
-[下载安装包](https://github.com/AoralsFout/thmr-filter-node/releases/download/v0.3.0-beta.4/thmr-node-0.3.0-beta.4-windows-x64-install.zip) · [查看全部发布](https://github.com/AoralsFout/thmr-filter-node/releases) · [安装与更新说明](docs/安装与更新.md)
+[下载安装包](https://github.com/AoralsFout/thmr-filter-node/releases/download/v0.4.0-beta.1/thmr-node-0.4.0-beta.1-windows-x64-install.zip) · [查看全部发布](https://github.com/AoralsFout/thmr-filter-node/releases) · [安装与更新说明](docs/安装与更新.md)
 
 1. 下载带 `-install.zip` 后缀的安装包，解压后双击 `Install.cmd`。基础程序无需 Git、Node.js 或 Python，也无需管理员权限。
 2. 首次安装会从上游固定版本下载约 110 MiB 的基础工具并验证 SHA256。保持网络连接；下载失败时可在安装目录重新运行 `setup-tools.ps1`。
@@ -16,6 +16,9 @@
 4. 节点完成音频环境自检后，等待维护者批准。只有明确允许社区处理的任务才会分配到社区节点。
 
 默认中央地址：<https://thmrfilter.aoralsfout.top>。本机工作台默认位于 <http://127.0.0.1:8765>。邀请码请通过与维护者已有的私下联系渠道申请，不要在公开 Issue 发布邀请码、节点配置或凭证。
+
+
+**0.3.x 不支持原地升级到 0.4.x。** 新中央采用结构 100、协议 2；请保留旧安装，使用新的安装目录及空数据目录重新登记。安装器拒绝覆盖现有安装，指定新目录的方法见[安装与更新说明](docs/安装与更新.md#从-03x-重新安装)。
 
 ## 资源与数据
 
@@ -35,6 +38,6 @@
 
 已验证 Windows 安装、HTTPS 邀请接入、合成音频分析、社区结果隔离与验收、真实版本切换和启动失败恢复。基础工具按固定上游版本安装，第三方许可和来源见 [第三方组件](THIRD-PARTY.md)。
 
-第二台实体机器、实际 GPU 推理和大规模社区负载尚未完成验收。请先以少量获准任务试用，反馈时说明节点版本、系统版本和复现步骤。
+浏览器全量回归仍有旧用例未适配，不能视为完整界面验收通过。第二台实体机器、本版安装包的实际 GPU 推理和大规模社区负载尚未完成验收。请先以少量获准任务试用，反馈时说明节点版本、系统版本和复现步骤。
 
 [报告问题](https://github.com/AoralsFout/thmr-filter-node/issues/new/choose) · [安全问题说明](SECURITY.md) · [参与贡献](CONTRIBUTING.md)
