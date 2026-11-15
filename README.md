@@ -6,9 +6,9 @@
 
 ## 下载与启动
 
-**当前公开测试版：`0.4.0-beta.2`，Windows x64（Windows 10/11）。**
+**当前公开测试版：`0.4.0-beta.4`，Windows x64（Windows 10/11）。**
 
-[下载便携包](https://github.com/AoralsFout/thmr-filter-node/releases/download/v0.4.0-beta.2/thmr-node-0.4.0-beta.2-windows-x64-portable.zip) · [全部发布资产](https://github.com/AoralsFout/thmr-filter-node/releases/tag/v0.4.0-beta.2) · [接入与更新说明](docs/安装与更新.md)
+[下载便携包](https://github.com/AoralsFout/thmr-filter-node/releases/download/v0.4.0-beta.4/thmr-node-0.4.0-beta.4-windows-x64-portable.zip) · [全部发布资产](https://github.com/AoralsFout/thmr-filter-node/releases/tag/v0.4.0-beta.4) · [接入与更新说明](docs/安装与更新.md)
 
 1. 下载 `-portable.zip`，解压到希望保存程序的位置，双击根目录的 `thmr-node.exe`。
 2. 在网页选择社区邀请码或可信节点凭证接入，填写维护者提供的中央 HTTPS 地址、节点名称，并明确选择新的空业务数据目录。
@@ -17,6 +17,12 @@
 无需安装 Git、Node.js 或 Python。基础运行环境、FFmpeg/ffprobe 和 7-Zip 已随便携包提供；程序不迁入用户目录，不自动创建快捷方式或开启开机启动。
 
 **beta.2 改用新的便携布局，不接管 beta.1 或 0.3.x 的安装与配置。** 退出旧节点，保留旧目录，用新包、新空数据目录和新邀请码或凭证重新登记，不要将旧节点身份复制给其他人。本版中央结构为 100、元数据协议为 2。
+
+## 本版变化
+
+修复逐曲回传快照身份、只读目录解包误判和暂停/取消终态回传，降低空间统计开销，并完善 Windows 更新目录占用等待。保留人工审核与未确认 API 费用保护。
+
+beta 更新通道暂维持 0% 灰度，不自动切换已有节点；beta.2 及之后同布局节点请保留原目录，由维护者在停止接单、排空和备份后协调升级。
 
 ## 可选模型环境
 
